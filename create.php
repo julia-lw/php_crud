@@ -67,13 +67,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Inserção no Banco
     if (empty($nome_erro) && empty($endereco_erro) && empty($salario_erro) && empty($foto_erro) && empty($setor_erro)) {
         $sql = "INSERT INTO funcionarios (nome, endereco, salario, foto, setor_id) VALUES (?, ?, ?, ?, ?)";
-        $sql = "INSERT INTO setor (nome) VALUES (?)";
          
         if ($stmt = mysqli_prepare($link, $sql)) {
             mysqli_stmt_bind_param($stmt, "ssisi", $param_nome, $param_endereco, $param_salario, $param_foto, $param_setor_id);
             
             $param_nome = $nome;
-            $param_setor = $setor;
             $param_endereco = $endereco;
             $param_salario = $salario;
             $param_foto = $foto_nome;
