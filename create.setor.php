@@ -56,8 +56,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
     <div class="max-w-md mx-auto my-10 p-6 bg-white rounded-xl shadow-sm border border-gray-200">
-        <h2 class="text-2xl font-bold text-gray-800 mb-1">Cadastrar Funcionário</h2>
-        <p class="text-sm text-gray-500 mb-6">Preencha os campos abaixo para salvar o funcionário.</p>
+        <h2 class="text-2xl font-bold text-gray-800 mb-1">Cadastrar Setor</h2>
+        <p class="text-sm text-gray-500 mb-6">Preencha os campos abaixo para salvar o setor.</p>
 
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data" class="space-y-4">
           
@@ -69,11 +69,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <span class="text-red-500 text-xs mt-1 block"><?php echo $nome_erro; ?></span>
                 <?php endif; ?>
             </div>
-
-            
-          
-
-            
 
             <div class="pt-4 flex items-center gap-3">
                 <input type="submit" value="Salvar" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2 rounded-lg transition cursor-pointer">
