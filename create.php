@@ -1,7 +1,6 @@
 <?php
 require_once "auth.php";
 require_once "config.php";
-require_once "create.setor.php";
 
 $nome = $endereco = $salario = $setor_id = "";
 $nome_erro = $endereco_erro = $salario_erro = $foto_erro = $setor_erro = "";
